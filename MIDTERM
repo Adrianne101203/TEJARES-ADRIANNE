@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StudentWithSuffix {
     private String firstName;
     private String middleName;
@@ -79,7 +81,33 @@ public class StudentWithSuffix {
     }
 
     public static void main(String[] args) {
-        StudentWithSuffix student = new StudentWithSuffix("Adrianne", "Abay", "Tejares", 20, "October 12, 2003", "Tangke Talisay City Cebu", "None");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter First Name: ");
+        String firstName = scanner.nextLine();
+
+        System.out.print("Enter Middle Name: ");
+        String middleName = scanner.nextLine();
+
+        System.out.print("Enter Last Name: ");
+        String lastName = scanner.nextLine();
+
+        System.out.print("Enter Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+        System.out.print("Enter Birthday: ");
+        String birthday = scanner.nextLine();
+
+        System.out.print("Enter Address: ");
+        String address = scanner.nextLine();
+
+        System.out.print("Enter Suffix: ");
+        String suffix = scanner.nextLine();
+
+        scanner.close(); // Close the scanner
+
+        StudentWithSuffix student = new StudentWithSuffix(firstName, middleName, lastName, age, birthday, address, suffix);
 
         System.out.println("First Name: " + student.getFirstName());
         System.out.println("Middle Name: " + student.getMiddleName());
@@ -91,4 +119,3 @@ public class StudentWithSuffix {
         System.out.println("Suffix: " + student.getSuffix());
     }
 }
-
