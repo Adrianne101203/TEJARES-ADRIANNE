@@ -1,1 +1,94 @@
+public class StudentWithSuffix {
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    private int age;
+    private String birthday;
+    private String address;
+    private String suffix;
+
+    public StudentWithSuffix(String firstName, String middleName, String lastName, int age, String birthday, String address, String suffix) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.age = age;
+        this.birthday = birthday;
+        this.address = address;
+        this.suffix = suffix;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getSuffix() {
+        return suffix;
+    }
+
+    public void setSuffix(String suffix) {
+        this.suffix = suffix;
+    }
+
+    // Method to get the full name
+    public String getFullName() {
+        return firstName + " " + middleName + " " + lastName;
+    }
+
+    public static void main(String[] args) {
+        StudentWithSuffix student = new StudentWithSuffix("Adrianne", "Abay", "Tejares", 20, "October 12, 2003", "Tangke Talisay City Cebu", "None");
+
+        System.out.println("First Name: " + student.getFirstName());
+        System.out.println("Middle Name: " + student.getMiddleName());
+        System.out.println("Last Name: " + student.getLastName());
+        System.out.println("Age: " + student.getAge());
+        System.out.println("Birthday: " + student.getBirthday());
+        System.out.println("Address: " + student.getAddress());
+        System.out.println("Full Name: " + student.getFullName());
+        System.out.println("Suffix: " + student.getSuffix());
+    }
+}
 
